@@ -1,0 +1,108 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ExtCtrls.hpp>
+#include <ImgList.hpp>
+#include <Graphics.hpp>
+#include <jpeg.hpp>
+#include <Menus.hpp>
+#include <Dialogs.hpp>
+#include <MPlayer.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+        TPaintBox *PaintBox1;
+        TImageList *bloque;
+        TImageList *soni;
+        TTimer *Timer1;
+        TImageList *malo;
+        TLabel *Label1;
+        TLabel *Label2;
+        TLabel *Label3;
+        TLabel *Label4;
+        TButton *Button1;
+        TButton *Button2;
+        TTimer *Timer2;
+        TImageList *soni3;
+        TTimer *Timer3;
+        TPanel *Panel1;
+        TImageList *Poder;
+        TTimer *Timer4;
+        TImage *Image1;
+        TTimer *Timer5;
+        TMainMenu *MainMenu1;
+        TMenuItem *juego1;
+        TMenuItem *nuevo1;
+        TMenuItem *guardar1;
+        TMenuItem *cargar1;
+        TOpenDialog *OpenDialog1;
+        TSaveDialog *SaveDialog1;
+        TImageList *SONIC_SUPER;
+        TTimer *Timer6;
+        TTimer *Timer7;
+        TMediaPlayer *Sonifondo;
+        TMenuItem *Audio1;
+        TMenuItem *Fondo1;
+        TMenuItem *Efectos1;
+        TMediaPlayer *Sonidopoder;
+        TMediaPlayer *Sonidocomer;
+        TImage *Image2;
+        TMediaPlayer *Muerte;
+        TMediaPlayer *final;
+        TMenuItem *Salir1;
+        TButton *Button3;
+        void __fastcall FormCreate(TObject *Sender);
+        void __fastcall PaintBox1Paint(TObject *Sender);
+        void __fastcall FormKeyDown(TObject *Sender, WORD &Key,
+          TShiftState Shift);
+        void __fastcall Timer1Timer(TObject *Sender);
+        void __fastcall Button2Click(TObject *Sender);
+        void __fastcall Button1Click(TObject *Sender);
+        void __fastcall Timer2Timer(TObject *Sender);
+        void __fastcall Timer3Timer(TObject *Sender);
+        void __fastcall Timer4Timer(TObject *Sender);
+        void __fastcall Timer5Timer(TObject *Sender);
+        void __fastcall Timer6Timer(TObject *Sender);
+        void __fastcall Timer7Timer(TObject *Sender);
+        void __fastcall Fondo1Click(TObject *Sender);
+        void __fastcall Salir1Click(TObject *Sender);
+        void __fastcall guardar1Click(TObject *Sender);
+        void __fastcall cargar1Click(TObject *Sender);
+        void __fastcall Button3Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+        __fastcall TForm1(TComponent* Owner);
+        void borrahorizontal(int x, int y, int x2);
+        void borravertical(int x, int y, int x2);
+        void cambiabloque();
+        void inicializar(int todo);
+        int  revizar(int actual, int anterior);
+        void mundo_muevo();
+        void rebotar(int N, int O);
+        void Dibujarmundo();
+        void bordear(int N);
+        void borradiagonal(int x, int y, int x2, int y2);
+        void activar_toque(int x, int y);
+        void revisar_toque();
+        void revisar_a_Sonic();
+        int choque_con_malos();
+        void crear_malo(int N);
+        void crear_malo();
+        void Quitar_poder();
+        void Revisar_poder();
+        void Revisar_esquina();
+        void Malos(int Nivel);
+
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif
+ 
